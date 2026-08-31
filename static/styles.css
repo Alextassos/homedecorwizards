@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc;
+    color: #333333;
+    line-height: 1.7;
+}
+
+
+.policy-header {
+    background-color: #F7f1EA; 
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #E6CCB2;
+}
+
+.back-home {
+    display: inline-block;
+    text-decoration: none;
+    color: #7F5539;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: #B58A63;
+}
+
+.policy-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.line-divider {
+    width: 150px;
+    height: 1px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, #7F5539, transparent);
+}
+
+
+.policy-container {
+    max-width: 800px; 
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Κάθε ενότητα νομικού κειμένου */
+.policy-section {
+    margin-bottom: 40px;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+}
+
+.policy-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #7F5539;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.policy-section p {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.policy-section p:last-child {
+    margin-bottom: 0; 
+}
+
+.policy-section strong {
+    color: #333333;
+}
+
+/* Μίνιμαλ Footer */
+.policy-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #E6CCB2;
+    background-color: #F7f1EA;
+}
+
+.policy-footer p {
+    font-size: 12px;
+    color: #777777;
+}
+
+
+@media (max-width: 768px) {
+    .policy-header h1 { 
+        font-size: 28px; 
+    }
+    .policy-container { 
+        margin: 30px auto; 
+        padding: 0 15px;
+    }
+    .policy-section { 
+        padding: 20px; 
+    }
+}
+

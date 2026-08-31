@@ -1,0 +1,594 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+   background-color: #F7f1EA;
+    overflow-x: hidden;
+}
+
+
+#header {
+    position: relative;        
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    width: 100%;
+    height: 500px;               
+    flex-shrink: 0;              
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('decor.jpg');
+    background-color: #222; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
+#options {
+    position: absolute;        
+    top: 0;                    
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#options ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+#options a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;       
+    transition: color 0.3s ease;
+}
+
+#options a:hover {
+    color: #F5EBE0; 
+}
+
+
+#text {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: flex-start;   
+    height: 500px;             
+    width: 100%;
+    padding-left: 80px;        
+    margin-top: 60px;          
+}
+
+#text1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: #F5EBE0;
+    font-size: 46px;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#text2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #E6CCB2;
+    font-size: 29px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+
+#categories-section {
+    padding: 60px 80px;
+     background-color: #F7f1EA; 
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #333333;
+    margin-bottom: 50px;      
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: 100;
+    position: relative;       
+    padding-bottom: 15px;      
+}
+
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 250px;                
+    height: 1px;                 
+    background: linear-gradient(to right, transparent, #333333 50%, transparent);
+}
+
+
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; 
+    background-color: #FFFFFF;
+    border: 1px solid #E6CCB2; 
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+
+.category-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(230, 204, 178, 0.2); 
+    border-color: #B58A63; 
+}
+
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    color: #B58A63; 
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .icon-wrapper {
+    color: #7F5539; 
+}
+
+
+.category-card span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+
+#title-piece {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #333333;
+    margin-bottom: 50px;      
+    text-align: left;
+    letter-spacing: -1px;
+    font-weight: 100;
+    position: relative;       
+    display: inline-block;    
+    padding-left: 25px;      
+}
+
+
+#title-piece::before {
+    content: "";
+    position: absolute;
+    top: 50%;                 
+    transform: translateY(-50%);
+    right: 100%;              
+    width: 120px;             
+    height: 1px;              
+    background: linear-gradient(to right, transparent, #333333);
+    
+}
+
+
+#pieces {
+    padding: 80px 80px;
+   background-color: #F7f1EA;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+
+#prefer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; 
+    margin-top: 20px;
+}
+
+
+.product-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E6CCB2; 
+    border-radius: 4px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(230, 204, 178, 0.15);
+}
+
+
+.product-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+    background-color: #F7f1EA;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05); 
+}
+
+
+.product-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.product-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+
+.amazon-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #7F5539; 
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.amazon-btn:hover {
+    background-color: #B58A63; 
+}
+
+.elegant-divider {
+    width: 80%;               
+    height: 1px;
+    margin: 40px auto;       
+    background: linear-gradient(to right, transparent, #E6CCB2 50%, transparent);
+}
+
+
+#seasonals {
+    display: flex;
+    flex-direction: row;     
+    padding: 60px 80px;
+    max-width: 1360px;
+    margin: 0 auto;
+    gap: 60px;               
+    align-items: flex-start;  
+}
+
+
+.seasonal-title-box {
+    flex: 0 0 250px;          
+}
+
+#seasonal-title {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;   
+    line-height: 1.1;          
+    letter-spacing: -1px;
+}
+
+
+.title-top {
+    font-size: 52px;           
+    font-weight: 300;          
+    color: #333333;
+    text-transform: capitalize;
+}
+
+
+.title-bottom {
+    font-size: 58px;           
+    font-weight: 600;         
+    font-style: italic;       
+    color: #7F5539;           
+    padding-left: 15px;       
+}
+
+
+
+.seasonal-products {
+    display: flex;
+    flex-direction: row;      
+    gap: 30px;                
+    flex-grow: 1;            
+}
+
+
+
+.seasonal-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;                  
+    max-width: 280px;         
+    transition: all 0.3s ease;
+}
+
+.seasonal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 204, 178, 0.15);
+}
+
+
+.s-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;      
+    overflow: hidden;
+}
+
+.s-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.s-info {
+    padding: 15px;            
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.s-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;          
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.s-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;          
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+
+
+.s-amazon-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7F5539;
+    border: 1px solid #7F5539; 
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.s-amazon-btn:hover {
+    color: #FFFFFF;
+    background-color: #7F5539;
+}
+
+footer {
+    background-color: #F7f1EA; 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #E6CCB2; 
+}
+
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+}
+
+
+.social-icon {
+    color: #7F5539; 
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.social-icon:hover {
+    color: #B58A63; 
+    transform: scale(1.1); 
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.footer-copyright p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #666666;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1024px) {
+    #categories-section, #pieces, #seasonals {
+        padding: 60px 40px; 
+    }
+    
+    #seasonals {
+        flex-direction: column; 
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .seasonal-title-box {
+        text-align: center;
+        flex: unset;
+    }
+    
+    #seasonal-title {
+        align-items: center;
+    }
+    
+    .seasonal-products {
+        justify-content: center; 
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    #header {
+        height: 500px; 
+    }
+    
+    #options ul {
+        gap: 15px; 
+        margin-top: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #options a {
+        font-size: 14px; 
+    }
+    
+    #text {
+        padding-left: 20px; 
+        padding-right: 20px;
+        height: 380px;
+        margin-top: 80px;
+    }
+    
+    #text1 {
+        font-size: 32px; 
+    }
+    
+    #text2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    
+    #categories-section, #pieces, #seasonals {
+        padding: 50px 20px; 
+    }
+    
+    #title-piece {
+        font-size: 26px;
+        padding-left: 0;
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    #title-piece::before {
+        display: none;
+    }
+
+    /* 3. Κάρτες Προϊόντων & Seasonals */
+    #prefer {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    
+    .seasonal-card {
+        max-width: 100%; 
+        width: 100%;
+    }
+    
+    .title-top { font-size: 42px; }
+    .title-bottom { font-size: 46px; padding-left: 0; }
+}
+
+/* 📲 ΓΙΑ ΠΟΛΥ ΜΙΚΡΑ ΚΙΝΗΤΑ (Κάτω από 480px) */
+@media (max-width: 480px) {
+    #options ul {
+        gap: 10px;
+    }
+    
+    #options a {
+        font-size: 13px;
+    }
+    
+    #text1 {
+        font-size: 28px;
+    }
+    
+    .category-card span {
+        font-size: 14px;
+    }
+}

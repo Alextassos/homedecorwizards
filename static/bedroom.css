@@ -1,0 +1,223 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc;
+    color: #333333;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. CATEGORY HEADER
+   ========================================================================== */
+.category-header {
+    background-color: #F7f1EA; /* Το απαλό παστέλ χρώμα του site */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #E6CCB2;
+}
+
+.back-home {
+    display: inline-block;
+    text-decoration: none;
+    color: #7F5539;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: #B58A63;
+}
+
+.category-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.category-subtitle {
+    font-size: 15px;
+    color: #666666;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 15px auto;
+}
+
+.line-divider {
+    width: 150px;
+    height: 1px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, #7F5539, transparent);
+}
+
+.shop-the-look-container {
+    display: flex;
+    flex-direction: row;      
+    gap: 50px;                
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 40px;
+    align-items: flex-start;
+}
+
+
+.main-room-view {
+    flex: 0 0 400px;         
+    max-width: 100%;          
+    position: relative;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.room-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Κομψό ταμπελάκι πάνω στη φωτογραφία */
+.look-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #7F5539;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border-radius: 2px;
+}
+
+/* Δεξιά Στήλη: Το Grid των Προϊόντων */
+.room-products-grid {
+    flex: 1;                  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px;
+}
+
+/* Mini Κάρτα Προϊόντος */
+.mini-product-card {
+    background: #FFFFFF;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(230, 204, 178, 0.15);
+}
+
+.mini-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;      
+    overflow: hidden;
+    background-color: #F7f1EA;
+}
+
+.mini-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mini-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.price-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #B58A63;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.mini-amazon-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7F5539;
+    border: 1px solid #7F5539;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: auto;        
+    transition: all 0.3s ease;
+}
+
+.category-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #E6CCB2;
+    background-color: #F7f1EA;
+}
+
+.category-footer p {
+    font-size: 12px;
+    color: #777777;
+}
+/* ==========================================================================
+   5. RESPONSIVE ΘΩΡΑΚΙΣΗ (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .shop-the-look-container {
+        flex-direction: column; 
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .main-room-view {
+        width: 100%;          
+    }
+    
+    .room-products-grid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-products-grid {
+        grid-template-columns: 1fr;
+    }
+}

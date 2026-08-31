@@ -1,0 +1,233 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* Header */
+.about-header {
+    background-color: #F7f1EA; /* Παστέλ φόντο */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #E6CCB2;
+}
+
+.back-home {
+    display: inline-block;
+    text-decoration: none;
+    color: #7F5539;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: #B58A63;
+}
+
+.about-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    color: #333333;
+}
+
+.line-divider {
+    width: 150px;
+    height: 1px;
+    margin: 15px auto 0 auto;
+    background: linear-gradient(to right, transparent, #7F5539, transparent);
+}
+
+/* Main Container */
+.about-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Section 1: Hero 2 στήλες */
+.about-hero {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #7F5539;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.intro-p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-text p {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.hero-image-box {
+    flex: 1;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section 2: Mission & Highlights */
+.about-mission {
+    margin-bottom: 80px;
+}
+
+.mission-box {
+    background-color: #F7f1EA;
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid #E6CCB2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mission-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.mission-box p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555555;
+    font-size: 16px;
+}
+
+/* Grid για τα 3 Highlights */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.highlight-item {
+    background: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #E6CCB2;
+    border-radius: 4px;
+    position: relative;
+}
+
+.highlight-item span {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-style: italic;
+    color: rgba(127, 85, 57, 0.2); /* Πολύ απαλό καφέ αριθμητικό */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-weight: 700;
+}
+
+.highlight-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #7F5539;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Section 3: Quote */
+.about-quote {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #E6CCB2;
+    border-bottom: 1px solid #E6CCB2;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #7F5539;
+}
+
+/* Footer */
+.about-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #E6CCB2;
+    background-color: #F7f1EA;
+}
+
+.about-footer p {
+    font-size: 12px;
+    color: #777777;
+}
+
+
+@media (max-width: 768px) {
+    .about-hero { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .about-header h1 { 
+        font-size: 28px; 
+    }
+    .mission-box { 
+        padding: 25px; 
+    }
+    .quote-text { 
+        font-size: 20px; 
+    }
+    .highlights-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
