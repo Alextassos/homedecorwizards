@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. RESET & BASE STYLES
-   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,11 +12,8 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   2. CATEGORY HEADER
-   ========================================================================== */
 .category-header {
-    background-color: #F7f1EA; /* Το απαλό παστέλ χρώμα του site */
+    background-color: #F7f1EA;
     padding: 60px 20px;
     text-align: center;
     border-bottom: 1px solid #E6CCB2;
@@ -65,16 +59,58 @@ body {
     background: linear-gradient(to right, transparent, #7F5539, transparent);
 }
 
+.room-description {
+    max-width: 1300px;
+    margin: 60px auto 10px auto;
+    padding: 0 40px;
+    text-align: left;
+}
+
+.room-category-tag {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B58A63;
+    margin-bottom: 8px;
+}
+
+.room-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+    color: #333333;
+    line-height: 1.2;
+}
+
+.room-accent-line {
+    width: 40px;
+    height: 1px;
+    background-color: #7F5539;
+    margin: 15px 0 20px 0;
+}
+
+.room-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    max-width: 750px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
 .shop-the-look-container {
     display: flex;
     flex-direction: row;      
     gap: 50px;                
     max-width: 1300px;
-    margin: 60px auto;
+    margin: 40px auto 60px auto;
     padding: 0 40px;
     align-items: flex-start;
 }
-
 
 .main-room-view {
     flex: 0 0 400px;         
@@ -93,7 +129,6 @@ body {
     object-fit: cover;
 }
 
-/* Κομψό ταμπελάκι πάνω στη φωτογραφία */
 .look-badge {
     position: absolute;
     top: 20px;
@@ -109,7 +144,6 @@ body {
     border-radius: 2px;
 }
 
-/* Δεξιά Στήλη: Το Grid των Προϊόντων */
 .room-products-grid {
     flex: 1;                  
     display: grid;
@@ -117,7 +151,6 @@ body {
     gap: 25px;
 }
 
-/* Mini Κάρτα Προϊόντος */
 .mini-product-card {
     background: #FFFFFF;
     border: 1px solid #E6CCB2;
@@ -186,6 +219,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.mini-amazon-btn:hover {
+    background-color: #7F5539;
+    color: #FFFFFF;
+}
+
 .category-footer {
     text-align: center;
     padding: 30px 20px;
@@ -197,57 +235,7 @@ body {
     font-size: 12px;
     color: #777777;
 }
-/* ==========================================================================
-   ΝΕΟ: STYLISH ROOM DESCRIPTION
-   ========================================================================== */
-.room-description {
-    max-width: 1300px;
-    margin: 60px auto 10px auto; /* Σωστά περιθώρια για να δένει με το grid από κάτω */
-    padding: 0 40px;
-    text-align: left;
-}
 
-/* Μικρό κομψό ταμπελάκι κατηγορίας πάνω από τον τίτλο */
-.room-category-tag {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #B58A63; /* Το ανοιχτό καφέ του site */
-    margin-bottom: 8px;
-}
-
-/* Ο κεντρικός τίτλος του δωματίου */
-.room-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 100; /* Minimal fine γραμμή όπως το κεντρικό h1 */
-    letter-spacing: -0.5px;
-    color: #333333;
-    line-height: 1.2;
-}
-
-/* Λεπτή διακριτική γραμμή κάτω από τον τίτλο */
-.room-accent-line {
-    width: 40px;
-    height: 1px;
-    background-color: #7F5539;
-    margin: 15px 0 20px 0;
-}
-
-/* Το κείμενο της περιγραφής */
-.room-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    color: #666666;
-    max-width: 750px; /* Για να μην απλώνεται σε τεράστιες οθόνες και κουράζει */
-    line-height: 1.7;
-    font-weight: 300;
-}
-
-/* Responsive προσαρμογή για tablet και κινητά */
 @media (max-width: 992px) {
     .room-description {
         padding: 0 20px;
@@ -257,20 +245,14 @@ body {
     .room-title {
         font-size: 26px;
     }
-}
-
-
-@media (max-width: 992px) {
     .shop-the-look-container {
         flex-direction: column; 
         gap: 40px;
         padding: 0 20px;
     }
-    
     .main-room-view {
         width: 100%;          
     }
-    
     .room-products-grid {
         width: 100%;
     }
