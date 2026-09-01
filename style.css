@@ -646,10 +646,12 @@ footer {
     }
 
     /* 3. Κάρτες Προϊόντων & Seasonals */
-    #prefer {
-        grid-template-columns: 1fr; 
-        gap: 30px;
-    }
+#prefer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Μικρότερο κενό ανάμεσα στις σειρές στα κινητά */
+}
+
     
     .seasonal-card {
         max-width: 100%; 
