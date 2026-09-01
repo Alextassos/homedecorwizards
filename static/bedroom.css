@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. RESET & BASE STYLES
-   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,11 +12,8 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   2. CATEGORY HEADER
-   ========================================================================== */
 .category-header {
-    background-color: #F7f1EA; /* Το απαλό παστέλ χρώμα του site */
+    background-color: #F7f1EA; 
     padding: 60px 20px;
     text-align: center;
     border-bottom: 1px solid #E6CCB2;
@@ -65,19 +59,27 @@ body {
     background: linear-gradient(to right, transparent, #7F5539, transparent);
 }
 
+/* Container διάταξης */
+.shop-the-look-container-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Αυτό εξασφαλίζει ότι κάθε κρεβατοκάμαρα έχει σωστό flex layout */
 .shop-the-look-container {
     display: flex;
     flex-direction: row;      
-    gap: 50px;                
+    gap: 60px;                
     max-width: 1300px;
-    margin: 60px auto;
+    margin: 20px auto 40px auto; /* Μαζέψαμε λίγο τα margins */
     padding: 0 40px;
     align-items: flex-start;
+    width: 100%;
 }
 
-
 .main-room-view {
-    flex: 0 0 400px;         
+    flex: 0 0 500px; /* Ελαφρώς μεγαλύτερη για να αναδεικνύεται η φωτογραφία */
     max-width: 100%;          
     position: relative;
     border: 1px solid #E6CCB2;
@@ -93,7 +95,6 @@ body {
     object-fit: cover;
 }
 
-/* Κομψό ταμπελάκι πάνω στη φωτογραφία */
 .look-badge {
     position: absolute;
     top: 20px;
@@ -109,81 +110,92 @@ body {
     border-radius: 2px;
 }
 
-/* Δεξιά Στήλη: Το Grid των Προϊόντων */
+/* ΝΕΑ ΛΙΣΤΑ ΠΡΟΪΟΝΤΩΝ (TEXT-ONLY) */
 .room-products-grid {
     flex: 1;                  
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 25px;
-}
-
-/* Mini Κάρτα Προϊόντος */
-.mini-product-card {
-    background: #FFFFFF;
-    border: 1px solid #E6CCB2;
-    border-radius: 4px;
-    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column; /* Αυτό αναγκάζει τα στοιχεία να μπαίνουν σε στήλη */
+    gap: 0;
+    counter-reset: product-counter;
 }
 
-.mini-product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(230, 204, 178, 0.15);
-}
 
-.mini-img-wrapper {
-    width: 100%;
-    aspect-ratio: 1 / 1;      
-    overflow: hidden;
-    background-color: #F7f1EA;
-}
-
-.mini-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.mini-info {
-    padding: 15px;
+.text-only-link {
+    padding: 20px 0;
+    border-bottom: 1px solid #E6CCB2; /* Διαχωριστική γραμμή στην παλέτα του site */
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    align-items: center;
 }
 
-.mini-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.price-indicator {
+.text-only-link::before {
+    counter-increment: product-counter;
+    content: "0" counter(product-counter) "."; /* Παράγει 01., 02., κλπ */
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: #B58A63;
-    margin-bottom: 12px;
-    font-weight: 400;
+    margin-right: 15px;
+    font-weight: 500;
 }
 
-.mini-amazon-btn {
-    display: block;
-    text-align: center;
+.product-direct-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: #333333;
     text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover εφέ με κομψή μετατόπιση */
+.product-direct-link:hover {
+    color: #7F5539; 
+    transform: translateX(8px);
+}
+
+/* STYLISH ROOM DESCRIPTION */
+.room-description {
+    max-width: 1300px;
+    margin: 60px auto 10px auto; 
+    padding: 0 40px;
+    text-align: left;
+}
+
+.room-category-tag {
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    color: #7F5539;
-    border: 1px solid #7F5539;
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-top: auto;        
-    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    color: #B58A63; 
+    margin-bottom: 8px;
+}
+
+.room-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 100; 
+    letter-spacing: -0.5px;
+    color: #333333;
+    line-height: 1.2;
+}
+
+.room-accent-line {
+    width: 40px;
+    height: 1px;
+    background-color: #7F5539;
+    margin: 15px 0 20px 0;
+}
+
+.room-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    max-width: 750px; 
+    line-height: 1.7;
+    font-weight: 300;
 }
 
 .category-footer {
@@ -197,87 +209,26 @@ body {
     font-size: 12px;
     color: #777777;
 }
-/* ==========================================================================
-   ΝΕΟ: STYLISH ROOM DESCRIPTION
-   ========================================================================== */
-.room-description {
-    max-width: 1300px;
-    margin: 60px auto 10px auto; /* Σωστά περιθώρια για να δένει με το grid από κάτω */
-    padding: 0 40px;
-    text-align: left;
-}
 
-/* Μικρό κομψό ταμπελάκι κατηγορίας πάνω από τον τίτλο */
-.room-category-tag {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #B58A63; /* Το ανοιχτό καφέ του site */
-    margin-bottom: 8px;
-}
-
-/* Ο κεντρικός τίτλος του δωματίου */
-.room-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 100; /* Minimal fine γραμμή όπως το κεντρικό h1 */
-    letter-spacing: -0.5px;
-    color: #333333;
-    line-height: 1.2;
-}
-
-/* Λεπτή διακριτική γραμμή κάτω από τον τίτλο */
-.room-accent-line {
-    width: 40px;
-    height: 1px;
-    background-color: #7F5539;
-    margin: 15px 0 20px 0;
-}
-
-/* Το κείμενο της περιγραφής */
-.room-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    color: #666666;
-    max-width: 750px; /* Για να μην απλώνεται σε τεράστιες οθόνες και κουράζει */
-    line-height: 1.7;
-    font-weight: 300;
-}
-
-/* Responsive προσαρμογή για tablet και κινητά */
+/* Responsive προσαρμογές */
 @media (max-width: 992px) {
     .room-description {
         padding: 0 20px;
         margin-top: 40px;
-        margin-bottom: 0;
     }
     .room-title {
         font-size: 26px;
     }
-}
-
-
-@media (max-width: 992px) {
     .shop-the-look-container {
         flex-direction: column; 
         gap: 40px;
         padding: 0 20px;
+        margin-bottom: 50px;
     }
-    
     .main-room-view {
         width: 100%;          
     }
-    
     .room-products-grid {
         width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .room-products-grid {
-        grid-template-columns: 1fr;
     }
 }
