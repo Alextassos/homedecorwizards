@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Διορθώθηκαν τα Links των Google Fonts (Προστέθηκε το fonts.) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
-  <title>HomeDecor Wizards</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>HomeDecor Wizards</title>
 </head>
+<body>
 
-    
-   <body>
+    <!-- 1. HEADER SECTION -->
+    <div id="header">
+        <!-- Το Λογότυπο στην επάνω αριστερή γωνία -->
+        <a href="index.html" class="absolute-logo reveal">
+            <svg xmlns="http://w3.org" viewBox="0 0 710 400" class="logo-svg">
+                <path d="M91.8,228 L170.8,114.5 L292.8,114.5 L363,228 L404.5,161 L541.5,161 L642.5,294 L91.8,294 Z M351,294 L351,234 L213,234 L155.5,294 Z" fill="#2B3E50" />
+                <path d="M170.8,114.5 L252,114.5 L213,171 Z M404.5,161 L503,161 L451.5,232 Z" fill="#3A92D0" />
+                <rect x="254" y="244" width="13" height="13" fill="#3A92D0" />
+                <rect x="271" y="244" width="13" height="13" fill="#3A92D0" />
+                <rect x="254" y="261" width="13" height="13" fill="#3A92D0" />
+                <rect x="271" y="261" width="13" height="13" fill="#3A92D0" />
+                <rect x="495" y="238" width="17" height="17" fill="#3A92D0" />
+                <rect x="517" y="238" width="17" height="17" fill="#3A92D0" />
+                <rect x="495" y="260" width="17" height="17" fill="#3A92D0" />
+                <rect x="517" y="260" width="17" height="17" fill="#3A92D0" />
+                <text x="366" y="360" font-family="'Montserrat', sans-serif" font-size="62" font-weight="700" fill="#3A92D0" text-anchor="middle">HomeDecor Wizards</text>
+            </svg>
+        </a>
 
-<div id="header">
+        <!-- Μενού Πλοήγησης -->
+        <nav id="options">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#garden-spotlight">Garden</a></li>
+                <li><a href="#pieces">Our Ideas</a></li>
+                <li><a href="#seasonals">Seasonals</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Κείμενο Hero -->
+        <div id="text">
+            <h2 id="text1">Your dream home,</h2>
+            <h2 id="text2">just a click away</h2>
+        </div>
+    </div> <!-- ΤΕΛΟΣ HEADER -->
 
-    <!-- Το Λογότυπο στην επάνω αριστερή γωνία -->
-    <a href="index.html" class="absolute-logo reveal">
-        <svg xmlns="http://w3.org" viewBox="0 0 710 400" class="logo-svg">
-            <path d="M91.8,228 L170.8,114.5 L292.8,114.5 L363,228 L404.5,161 L541.5,161 L642.5,294 L91.8,294 Z M351,294 L351,234 L213,234 L155.5,294 Z" fill="#2B3E50" />
-            <path d="M170.8,114.5 L252,114.5 L213,171 Z M404.5,161 L503,161 L451.5,232 Z" fill="#3A92D0" />
-            <rect x="254" y="244" width="13" height="13" fill="#3A92D0" />
-            <rect x="271" y="244" width="13" height="13" fill="#3A92D0" />
-            <rect x="254" y="261" width="13" height="13" fill="#3A92D0" />
-            <rect x="271" y="261" width="13" height="13" fill="#3A92D0" />
-            <rect x="495" y="238" width="17" height="17" fill="#3A92D0" />
-            <rect x="517" y="238" width="17" height="17" fill="#3A92D0" />
-            <rect x="495" y="260" width="17" height="17" fill="#3A92D0" />
-            <rect x="517" y="260" width="17" height="17" fill="#3A92D0" />
-            <text x="366" y="360" font-family="'Montserrat', sans-serif" font-size="62" font-weight="700" fill="#3A92D0" text-anchor="middle">HomeDecor Wizards</text>
-        </svg>
-    </a>
-
-    <nav id="options">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#pieces">Our Ideas</a></li>
-            <li><a href="#seasonals">Seasonals</a></li>
-            <li><a href="#footer">Contact Us</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
-        </ul>
-    </nav>
-    
-    <div id="text">
-        <h2 id="text1">Your dream home,</h2>
-        <h2 id="text2">just a click away</h2>
-    </div>
-</div> 
-
-
-
-    
+    <!-- 2. CATEGORIES SECTION -->
     <section id="categories-section">
         <h2 class="section-title">Step Inside</h2>
         
         <div class="categories-grid">
-            
             <a href="bedroom.html" class="category-card">
                 <div class="icon-wrapper">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -97,82 +92,105 @@
             </a>
         </div>
     </section>
-<!--Best Ideas session-->
-<<section id="pieces">
 
-    <h2 id="title-piece">Our best ideas</h2>
+    <!-- 3. BEST IDEAS SECTION -->
+    <section id="pieces">
+        <h2 id="title-piece">Our best ideas</h2>
 
-    <div id="prefer">
+        <div id="prefer">
+            <!-- 01. Smart Tower Fan -->
+            <div class="home-product-row">
+                <a href="https://amzn.to/4gD44T5" target="_blank" class="home-luxury-link">
+                    <div class="home-product-title">Smart Tower Fan 28ft/s, 8 Speeds</div>
+                    <div class="home-product-desc">
+                        This is a lifesaver for hot days. It is incredibly quiet, has 8 different speeds, and has a sleek, bladeless design that looks subtle and modern in any corner.
+                    </div>
+                    <div class="home-product-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- 01. Smart Tower Fan -->
-        <div class="home-product-row">
-            <a href="https://amzn.to/4gD44T5" target="_blank" class="home-luxury-link">
-                <div class="home-product-title">Smart Tower Fan 28ft/s, 8 Speeds</div>
-                <div class="home-product-desc">
-                    This is a lifesaver for hot days. It is incredibly quiet, has 8 different speeds, and has a sleek, bladeless design that looks subtle and modern in any corner.
-                </div>
-                <div class="home-product-arrow">→</div>
+    <!-- 4. GARDEN SPOTLIGHT SECTION -->
+    <section id="garden-spotlight">
+        <div class="garden-container">
+            
+            <!-- Elegant SVG Κλαδί επάνω αριστερά -->
+            <svg class="garden-branch garden-branch-top" viewBox="0 0 120 120" fill="none" xmlns="http://w3.org">
+                <path d="M10,10 Q50,20 80,60 T110,110" stroke="#B58A63" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M32,17 Q45,5 55,12 C52,22 40,25 32,17 Z" fill="#B58A63" opacity="0.15"/>
+                <path d="M32,17 Q45,5 55,12" stroke="#B58A63" stroke-width="0.8"/>
+                <path d="M62,42 Q80,30 85,40 C75,50 65,48 62,42 Z" fill="#B58A63" opacity="0.15"/>
+                <path d="M62,42 Q80,30 85,40" stroke="#B58A63" stroke-width="0.8"/>
+            </svg>
+
+            <!-- Elegant SVG Κλαδί κάτω δεξιά -->
+            <svg class="garden-branch garden-branch-bottom" viewBox="0 0 120 120" fill="none" xmlns="http://w3.org">
+                <path d="M110,110 Q70,100 40,60 T10,10" stroke="#B58A63" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M88,103 Q75,115 65,108 C68,98 80,95 88,103 Z" fill="#B58A63" opacity="0.15"/>
+                <path d="M88,103 Q75,115 65,108" stroke="#B58A63" stroke-width="0.8"/>
+                <path d="M58,78 Q40,90 35,80 C45,70 55,72 58,78 Z" fill="#B58A63" opacity="0.15"/>
+                <path d="M58,78 Q40,90 35,80" stroke="#B58A63" stroke-width="0.8"/>
+            </svg>
+
+            <!-- Το περιεχόμενο (Κείμενο & Κουμπί) -->
+            <div class="garden-content">
+                <span class="garden-mini-title">Outdoor Living</span>
+                <h2 class="garden-title">Garden</h2>
+                <p class="garden-phrase">Bring life to your outdoor spaces with curated greens and timeless botanical aesthetics.</p>
+                <a href="garden.html" class="garden-btn">
+                    <span>Explore the Collection</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="elegant-divider"></div>
+
+    <!-- 5. SEASONAL PICKS SECTION -->
+    <section id="seasonals">
+        <div class="seasonal-title-box">
+            <h2 id="seasonal-title">
+                <span class="title-top">Seasonal</span>
+                <span class="title-bottom">Picks</span>
+            </h2>
+        </div>
+        
+        <div class="seasonal-products" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 20px;">
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: #B58A63; display: inline-block; margin-bottom: 6px;">Next Season Looks</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; color: #333333; margin-bottom: 12px; font-style: italic;">Refreshing our cozy collection...</h3>
+            
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #666666; line-height: 1.6; font-weight: 300; max-width: 550px; margin: 0;">
+                Honestly, we are in the middle of changing our seasonal layout. We are currently scouting for some fresh, cozy items to match the upcoming mood, so we can show you only the best-rated setups.
+            </p>
+            
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 500; color: #7F5539; margin-top: 12px;">
+                Check back shortly—we will have the new look ready in no time.
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER SECTION -->
+    <footer id="footer">
+        <div class="footer-socials">
+            <a href="https://pinterest.com" target="_blank" class="social-icon" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 22c.31-1.84.6-3.23.95-4.72C8.12 15.82 8 14.22 8 12.5c0-4.14 3.13-7.5 7-7.5s7 3.36 7 7.5c0 4.54-2.46 7.5-6 7.5-1.14 0-2.22-.61-2.58-1.31l-1.07 4.11C11.82 24.96 9.25 24 8 22z"/>
+                    <circle cx="15" cy="12.5" r="2.5"/>
+                </svg>
             </a>
         </div>
 
-    </div>
-</section>
+        <div class="footer-copyright">
+            <p>&copy; 2026 Alexandros Tassos. All rights reserved.</p>
+        </div>
+    </footer>
 
-
-
-    
-<div class="elegant-divider"></div>
-
-<!--seasonals session-->
-<section id="seasonals">
-    
-    <div class="seasonal-title-box">
-        <h2 id="seasonal-title">
-            <span class="title-top">Seasonal</span>
-            <span class="title-bottom">Picks</span>
-        </h2>
-    </div>
-    
-    <!-- Αντικατάσταση των προϊόντων με ένα κομψό Coming Soon μήνυμα -->
-    <div class="seasonal-products" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 20px;">
-        
-        <span style="font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: #B58A63; display: inline-block; margin-bottom: 6px;">Next Season Looks</span>
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; color: #333333; margin-bottom: 12px; font-style: italic;">Refreshing our cozy collection...</h3>
-        
-        <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #666666; line-height: 1.6; font-weight: 300; max-width: 550px; margin: 0;">
-            Honestly, we are in the middle of changing our seasonal layout. We are currently scouting for some fresh, cozy items to match the upcoming mood, so we can show you only the best-rated setups.
-        </p>
-        
-        <p style="font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 500; color: #7F5539; margin-top: 12px;">
-            Check back shortly—we will have the new look ready in no time.
-        </p>
-
-    </div>
-</section>
-
-<footer id="footer">
-    
-    <div class="footer-socials">
-
-        <!-- Pinterest (ΝΕΟ) -->
-        <a href="https://www.pinterest.com/HomeDecorWizards/" target="_blank" class="social-icon" aria-label="Pinterest">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="8" x2="12" y2="16"></line>
-                <path d="M8 12h8"></path>
-                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-                <!-- Εναλλακτικό καθαρό P-icon στυλιζαρισμένο για line art -->
-                <path d="M9 12a3 3 0 0 1 6 0c0 3-3 6-3 6M12 8v4"></path>
-            </svg>
-        </a>
-
-
-    <div class="footer-copyright">
-        <p>&copy; 2026 Alexandros Tassos. All rights reserved.</p>
-    </div>
-</footer>
-
-
- <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

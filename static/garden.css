@@ -1,0 +1,140 @@
+/* ==========================================================================
+   GARDEN UNDER CONSTRUCTION PAGE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7f1EA; /* Premium off-white που ταιριάζει με το κεντρικό site */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Καλλιτεχνικά SVG Κλαδιά Φόντου στις γωνίες */
+.bg-branch {
+    position: absolute;
+    width: 35vw;
+    max-width: 450px;
+    min-width: 250px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.branch-top-left {
+    top: -20px;
+    left: -20px;
+}
+
+.branch-bottom-right {
+    bottom: -20px;
+    right: -20px;
+}
+
+/* Κεντρικό Editorial Πλαίσιο */
+.construction-card {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
+    border: 1px dashed #E6CCB2;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(230, 204, 178, 0.15);
+}
+
+.mini-title {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #B58A63;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #2B3E50;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #7F5539;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 14.5px;
+    color: #666666;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+/* Premium Minimal Κουμπί */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 32px;
+    background-color: #2B3E50;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid #2B3E50;
+}
+
+.back-btn:hover {
+    background-color: transparent;
+    color: #2B3E50;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.btn-arrow {
+    width: 16px;
+    height: 16px;
+    transform: rotate(180deg); /* Στρέφει το βέλος να δείχνει «πίσω» */
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover .btn-arrow {
+    transform: rotate(180deg) translateX(4px);
+}
+
+/* Responsive προσαρμογή για μικρότερες οθόνες */
+@media (max-width: 600px) {
+    .main-title { 
+        font-size: 32px; 
+    }
+    .subtitle { 
+        font-size: 18px; 
+    }
+    .construction-card { 
+        padding: 40px 20px; 
+    }
+    .bg-branch { 
+        width: 50vw; 
+        opacity: 0.5; 
+    }
+}

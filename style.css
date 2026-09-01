@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. GENERAL STYLES & RESET
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,16 +9,17 @@
 
 body {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-   background-color: #F7f1EA;
+    background-color: #F7f1EA;
     overflow-x: hidden;
-        opacity: 1;
+    opacity: 1;
     transition: opacity 0.4s ease-in-out;   
 }
+
 body.fade-out {
     opacity: 0;
 }
 
-/* Αρχική κατάσταση στοιχείων: Κρυμμένα και ελαφρώς κατεβασμένα */
+/* Scroll Reveal Animations */
 .reveal {
     opacity: 0;
     transform: translateY(25px);
@@ -23,21 +27,23 @@ body.fade-out {
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Ενεργή κατάσταση: Εμφανίζονται ομαλά και ανεβαίνουν στη θέση τους */
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
 #header {
     position: relative;        
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
     width: 100%;
-    height: 500px;               
+    min-height: 520px;
+    height: auto;
+    padding-bottom: 40px;
     flex-shrink: 0;              
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('decor.jpg');
     background-color: #222; 
@@ -45,6 +51,7 @@ body.fade-out {
     background-position: center; 
     background-repeat: no-repeat;
 }
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -74,20 +81,6 @@ body.fade-out {
     display: block;
 }
 
-
-@media (max-width: 768px) {
-    .absolute-logo {
-        position: relative;
-        display: block;
-        margin: 20px auto;
-        left: 0;
-        top: 0;
-        text-align: center;
-        height: 55px;
-    }
-}
-
-
 #options {
     position: absolute;        
     top: 0;                    
@@ -96,9 +89,8 @@ body.fade-out {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    z-index: 999; /* 👈 ΑΥΤΟ ΘΑ ΣΩΣΕΙ ΤΟ ΚΛΙΚ ΣΤΟ ΚΙΝΗΤΟ */
+    z-index: 999;
 }
-
 
 #options ul {
     list-style: none;
@@ -121,16 +113,16 @@ body.fade-out {
     color: #F5EBE0; 
 }
 
-
+/* Header Text Hero */
 #text {
     display: flex;
     flex-direction: column;    
     justify-content: center;   
     align-items: flex-start;   
-    height: 500px;             
+    height: auto;
     width: 100%;
     padding-left: 80px;        
-    margin-top: 60px;          
+    margin-top: 140px;
 }
 
 #text1 {
@@ -154,10 +146,13 @@ body.fade-out {
     margin-top: 10px;
 }
 
-
+/* ==========================================================================
+   3. CATEGORIES SECTION (Grid)
+   ========================================================================== */
 #categories-section {
     padding: 60px 80px;
-     background-color: #F7f1EA; 
+    background-color: #F7f1EA; 
+    clear: both;
 }
 
 .section-title {
@@ -172,7 +167,6 @@ body.fade-out {
     padding-bottom: 15px;      
 }
 
-
 .section-title::after {
     content: "";
     position: absolute;
@@ -184,8 +178,6 @@ body.fade-out {
     background: linear-gradient(to right, transparent, #333333 50%, transparent);
 }
 
-
-
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -193,7 +185,6 @@ body.fade-out {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .category-card {
     display: flex;
@@ -208,13 +199,11 @@ body.fade-out {
     transition: all 0.3s ease;
 }
 
-
 .category-card:hover {
     transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(230, 204, 178, 0.2); 
     border-color: #B58A63; 
 }
-
 
 .icon-wrapper {
     width: 60px;
@@ -228,7 +217,6 @@ body.fade-out {
     color: #7F5539; 
 }
 
-
 .category-card span {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -236,6 +224,17 @@ body.fade-out {
     color: #4A4A4A;
     letter-spacing: 1px;
     text-transform: uppercase; 
+}
+
+/* ==========================================================================
+   4. OUR BEST IDEAS (#pieces)
+   ========================================================================== */
+#pieces {
+    padding: 80px 80px;
+    background-color: #F7f1EA;
+    max-width: 1360px;
+    margin: 0 auto;
+    clear: both;
 }
 
 #title-piece {
@@ -251,7 +250,6 @@ body.fade-out {
     padding-left: 25px;      
 }
 
-
 #title-piece::before {
     content: "";
     position: absolute;
@@ -261,34 +259,21 @@ body.fade-out {
     width: 120px;             
     height: 1px;              
     background: linear-gradient(to right, transparent, #333333);
-    
 }
-
-
-#pieces {
-    padding: 80px 80px;
-   background-color: #F7f1EA;
-    max-width: 1360px;
-    margin: 0 auto;
-}
-
 
 #prefer {
     display: flex;
     flex-direction: column;
     gap: 0; 
     margin-top: 50px;
-    max-width: 950px; /* Το μεγαλώσαμε ελάχιστα για να χωράει άνετα η περιγραφή */
+    max-width: 950px; 
     margin-left: auto;
     margin-right: auto;
     padding: 10px 20px;
-    
-    /* ULTRA ELEGANT EDITORIAL BORDERS */
     border-top: 1px solid #E6CCB2;
     border-bottom: 1px solid #E6CCB2;
 }
 
-/* Το container για το κάθε προϊόν */
 .home-product-row {
     width: 100%;
     border-bottom: 1px solid rgba(230, 204, 178, 0.4);
@@ -298,52 +283,47 @@ body.fade-out {
     border-bottom: none;
 }
 
-/* Ολόκληρη η γραμμή μετατρέπεται σε link */
 .home-luxury-link {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10px; /* Περισσότερος αέρας */
+    padding: 30px 10px; 
     text-decoration: none;
     transition: all 0.3s ease;
     width: 100%;
 }
 
-/* Hover εφέ με μετατόπιση */
 .home-luxury-link:hover {
     transform: translateX(8px);
-    background-color: rgba(230, 204, 178, 0.05); /* Απαλό πέρασμα στο hover */
+    background-color: rgba(230, 204, 178, 0.05); 
 }
 
-/* Ο Τίτλος του Προϊόντος (Αριστερή Στήλη) */
 .home-product-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.15rem;
     color: #222222;
-    font-weight: 500; /* Έντονα γράμματα */
+    font-weight: 500; 
     letter-spacing: 0.5px;
-    flex: 0 0 40%; /* Πιάνει το 40% του χώρου */
+    flex: 0 0 40%; 
     padding-right: 20px;
     transition: color 0.3s ease;
 }
 
 .home-luxury-link:hover .home-product-title {
-    color: #7F5539; /* Ο τίτλος αλλάζει χρώμα στο hover */
+    color: #7F5539; 
 }
 
-/* Η Περιγραφή του Προϊόντος (Δεξιά Στήλη) */
 .home-product-desc {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
     color: #666666;
-    font-weight: 300; /* Πιο light γράμματα για κομψή αντίθεση */
+    font-weight: 300; 
     line-height: 1.6;
-    flex: 1; /* Πιάνει τον υπόλοιπο χώρο */
+    flex: 1; 
     padding-right: 15px;
 }
 
-/* Το βελάκι στο τέλος */
 .home-product-arrow {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.15rem;
@@ -357,33 +337,139 @@ body.fade-out {
     color: #7F5539;
 }
 
-/* Responsive προσαρμογή για κινητά */
-@media (max-width: 768px) {
-    .home-luxury-link {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 5px;
-    }
-    .home-product-title {
-        flex: 1;
-        width: 100%;
-        margin-bottom: 8px;
-        padding-right: 0;
-    }
-    .home-product-desc {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .home-product-arrow {
-        width: 100%;
-        text-align: left;
+/* ==========================================================================
+   5. GARDEN SPOTLIGHT SECTION (WITH ARTISTIC SVG BRANCHES)
+   ========================================================================== */
+#garden-spotlight {
+    position: relative;
+    padding: 80px 20px;
+    background-color: #faf9f6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+.garden-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    min-height: 350px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    border: 1px dashed #E6CCB2;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(230, 204, 178, 0.1);
+    overflow: hidden; /* Κρατάει τα κλαδιά μέσα στο πλαίσιο */
+}
+
+/* Κοινά styles για τα κλαδιά κήπου */
+.garden-branch {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    pointer-events: none; /* Δεν εμποδίζουν τα κλικ */
+    z-index: 1;
+}
+
+.garden-branch-top {
+    top: 5px;
+    left: 5px;
+}
+
+.garden-branch-bottom {
+    bottom: 5px;
+    right: 5px;
+}
+
+.garden-content {
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2; /* Πάνω από τα κλαδιά */
+}
+
+.garden-mini-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #B58A63;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.garden-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: #2B3E50; 
+    margin: 0 0 16px 0;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.garden-phrase {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.garden-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 30px;
+    background-color: #2B3E50;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 0px; 
+    transition: all 0.3s ease;
+    border: 1px solid #2B3E50;
+}
+
+.garden-btn:hover {
+    background-color: transparent;
+    color: #2B3E50;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.btn-arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.garden-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Απόκρυψη κλαδιών σε πολύ μικρές οθόνες για βελτίωση του αναγνωσιμότητας */
+@media (max-width: 480px) {
+    .garden-branch {
+        display: none;
     }
 }
 
-
-
-
-
+/* Decorative Divider */
 .elegant-divider {
     width: 80%;               
     height: 1px;
@@ -392,6 +478,10 @@ body.fade-out {
 }
 
 
+
+/* ==========================================================================
+   6. SEASONAL PICKS
+   ========================================================================== */
 #seasonals {
     display: flex;
     flex-direction: row;     
@@ -400,8 +490,8 @@ body.fade-out {
     margin: 0 auto;
     gap: 60px;               
     align-items: flex-start;  
+    clear: both;
 }
-
 
 .seasonal-title-box {
     flex: 0 0 250px;          
@@ -415,14 +505,12 @@ body.fade-out {
     letter-spacing: -1px;
 }
 
-
 .title-top {
     font-size: 52px;           
     font-weight: 300;          
     color: #333333;
     text-transform: capitalize;
 }
-
 
 .title-bottom {
     font-size: 58px;           
@@ -432,16 +520,12 @@ body.fade-out {
     padding-left: 15px;       
 }
 
-
-
 .seasonal-products {
     display: flex;
     flex-direction: row;      
     gap: 30px;                
     flex-grow: 1;            
 }
-
-
 
 .seasonal-card {
     background-color: #FFFFFF;
@@ -460,7 +544,6 @@ body.fade-out {
     box-shadow: 0 10px 20px rgba(230, 204, 178, 0.15);
 }
 
-
 .s-image-wrapper {
     width: 100%;
     aspect-ratio: 4 / 3;      
@@ -472,7 +555,6 @@ body.fade-out {
     height: 100%;
     object-fit: cover;
 }
-
 
 .s-info {
     padding: 15px;            
@@ -497,8 +579,6 @@ body.fade-out {
     flex-grow: 1;
 }
 
-
-
 .s-amazon-btn {
     display: inline-block;
     text-align: center;
@@ -520,7 +600,10 @@ body.fade-out {
     background-color: #7F5539;
 }
 
-footer {
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+#footer {
     background-color: #F7f1EA; 
     padding: 40px 20px;
     display: flex;
@@ -529,8 +612,8 @@ footer {
     justify-content: center;
     gap: 20px;
     border-top: 1px solid #E6CCB2; 
+    clear: both;
 }
-
 
 .footer-socials {
     display: flex;
@@ -538,14 +621,12 @@ footer {
     gap: 25px; 
 }
 
-
 .social-icon {
     color: #7F5539; 
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 
 .social-icon:hover {
     color: #B58A63; 
@@ -557,7 +638,6 @@ footer {
     height: 100%;
 }
 
-
 .footer-copyright p {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
@@ -566,8 +646,9 @@ footer {
     text-align: center;
 }
 
-
-
+/* ==========================================================================
+   8. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 1024px) {
     #categories-section, #pieces, #seasonals {
         padding: 60px 40px; 
@@ -594,11 +675,20 @@ footer {
     }
 }
 
-
 @media (max-width: 768px) {
-    
+    .absolute-logo {
+        position: relative;
+        display: block;
+        margin: 20px auto;
+        left: 0;
+        top: 0;
+        text-align: center;
+        height: 55px;
+    }
+
     #header {
-        height: 500px; 
+        height: auto !important; 
+        min-height: 480px;
     }
     
     #options ul {
@@ -615,8 +705,7 @@ footer {
     #text {
         padding-left: 20px; 
         padding-right: 20px;
-        height: 380px;
-        margin-top: 80px;
+        margin-top: 100px;
     }
     
     #text1 {
@@ -628,7 +717,6 @@ footer {
         letter-spacing: 1px;
     }
 
-    
     #categories-section, #pieces, #seasonals {
         padding: 50px 20px; 
     }
@@ -645,13 +733,34 @@ footer {
         display: none;
     }
 
-    /* 3. Κάρτες Προϊόντων & Seasonals */
-#prefer {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Μικρότερο κενό ανάμεσα στις σειρές στα κινητά */
-}
+    #prefer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+    }
 
+    .home-luxury-link {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 5px;
+    }
+
+    .home-product-title {
+        flex: 1;
+        width: 100%;
+        margin-bottom: 8px;
+        padding-right: 0;
+    }
+
+    .home-product-desc {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .home-product-arrow {
+        width: 100%;
+        text-align: left;
+    }
     
     .seasonal-card {
         max-width: 100%; 
@@ -660,9 +769,21 @@ footer {
     
     .title-top { font-size: 42px; }
     .title-bottom { font-size: 46px; padding-left: 0; }
+
+    .seasonal-products {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 0 !important;
+    }
 }
 
-/* 📲 ΓΙΑ ΠΟΛΥ ΜΙΚΡΑ ΚΙΝΗΤΑ (Κάτω από 480px) */
+@media (max-width: 600px) {
+    .garden-title { font-size: 36px; }
+    .garden-phrase { font-size: 13.5px; }
+    .garden-container { padding: 20px; min-height: 320px; }
+}
+
 @media (max-width: 480px) {
     #options ul {
         gap: 10px;
@@ -680,3 +801,4 @@ footer {
         font-size: 14px;
     }
 }
+
